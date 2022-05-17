@@ -1,0 +1,556 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: Calibri, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #e3feff;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+p{
+  font-size: 20px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+
+/*keyframes*/
+@keyframes fade-in{
+  from{
+    opacity: 0;
+  }
+
+  to{
+      opacity: 1;
+  }
+}
+
+.transform:hover{
+  transform: scale(1.1);
+  transition: 500ms;
+}
+
+.align-center {
+  text-align: center;
+}
+.align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.paraf {
+  margin-bottom: 40px;
+  font-size: 24px;
+}
+
+/*struktura*/
+
+.header {
+  border-bottom: 2px solid #4169e1;
+  background-color: #fefefe;
+}
+
+.column {
+  /*border:1px solid black;*/
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.page .column {
+  height: 100vh;
+}
+
+/*header*/
+#logo-social {
+  display: flex;
+}
+
+#logo-holder {
+  flex-grow: 1;
+}
+
+#logo-holder img {
+  max-height: 40px;
+}
+
+#social-holder {
+  flex-grow: 1;
+  text-align: right;
+}
+
+#social-holder a {
+  text-decoration: none;
+}
+
+#social-holder a img {
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+  transition: 500ms;
+}
+
+#social-holder a img:hover {
+  transform: scale(1.2);
+  transition: 500ms;
+}
+
+#main-menu {
+  display: flex;
+}
+
+#main-menu a {
+  flex-grow: 1;
+  text-align: center;
+  text-decoration: none;
+  color:#4169e1;
+  display: block;
+  padding: 10px 0;
+  transition: 500ms;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#main-menu a:hover,
+#main-menu a.active {
+  background-color: #4169e1;
+  color: white;
+  transition: 500ms;
+}
+
+#jezik{
+  position: absolute;
+  right: 3%;
+  background-color: #4169e1;
+}
+
+#jezik a{
+  display: block;
+  padding:10px;
+  border-bottom: 1px solid white;
+  color: white;
+  font-weight: bold;
+  transition: 200ms;
+}
+
+/*pocetna*/
+
+#pocetna {
+  text-align: center;
+  color: white;
+  background: url(assets/pozadina/pozadina4.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 10% 0;
+}
+
+#pocetna h1 {
+  font-size: 45pt;
+  margin-bottom: 50px;
+}
+
+.dark-box {
+  border: 1px solid white;
+  background-color: #33333380;
+  font-size: 20pt;
+  padding: 3% 2%;
+  width: 80%;
+  margin: 0px auto;
+  transition: 1s;
+  animation: fade-in 3s;
+}
+
+.dark-box p:nth-child(2) {
+  margin-top: 40px;
+}
+
+/*o nama*/
+
+#marko-kubla {
+  padding: 50px 0;
+}
+
+#marko-kubla p.align-center {
+  margin-bottom: 40px;
+}
+
+.krugovi {
+  display: flex;
+}
+
+.krug-holder {
+  flex-grow: 1;
+}
+
+.krug {
+  color: white;
+  font-size: 48px;
+  font-weight: bold;
+  /*width: 60%;
+	height: 200px;*/
+  width: 350px;
+  height: 350px;
+  display: inline-block;
+  padding: 15%;
+}
+
+.krug img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 500ms;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+.krugovi-responsive {
+  display: none;
+  display: block;
+}
+
+.krugovi-responsive .krug-holder {
+  width: 100%;
+}
+
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+.modalText{
+  background-color: white;
+  font-size: 20px;
+  max-width: 80%;
+  margin: 0px auto;
+  padding: 20px;
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.modalText2{
+  background-color: white;
+  font-size: 20px;
+  max-width: 80%;
+  margin: 0px auto;
+  padding: 20px;
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.oznaka {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+
+/*kultura*/
+
+#kultura {
+  background: url(assets/pozadina/spojeneSlike.svg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  /*color: white;*/
+  padding: 50px 0;
+  height: 100vh;
+}
+
+#kultura h2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+#acordion-wrap {
+  width: 50%;
+  margin: 80px auto 0px auto;
+  background-color: #828783;
+  color: white;
+  border-radius: 3%;
+  box-shadow: 5px 10px 18px #888888;
+}
+
+#acordion-wrap h3 {
+  font-size: 25px;
+  /*background-color: #4169e1;*/
+  /*color: white;*/
+  padding: 10px;
+}
+
+#acordion-wrap p{
+  padding: 10px;
+
+}
+
+/*kreativnost*/
+
+#kreativnost {
+  padding: 50px 0;
+  border-bottom: 4px solid #4169e1;
+}
+
+#kreativnost button{
+  width: 100px;
+  color: white;
+  border:none;
+  background-color: #4169e1;
+  padding:5px;
+  font-size: 25px;
+  margin-left: 20%;
+  border-radius: 5%;
+  transition: 500ms;
+}
+
+#kreativnost p{
+  padding-bottom: 15px;
+}
+#slider-content-wrap{
+  display: flex;
+  justify-content: space-between;
+  padding: 70px 0px;
+}
+
+#slider-content-text, .slider-wrap{
+  width: 40%;
+}
+
+.slider-wrap img{
+  width: 100%;
+}
+
+/*kontakt*/
+
+#kontakt{
+  padding-top: 30px;
+}
+
+#kontakt h2{
+  padding-bottom: 30px;
+}
+
+#kontakt p:first-child{
+  width: 80%;
+  margin: 10% auto;
+}
+
+#kontakt-wrap {
+  display: flex;
+  justify-content: space-between;
+  border-left: 4px solid #4169e1;
+  padding-left: 10px;
+}
+
+#kontakt-wrap span{
+  color: black;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+#kontakt-wrap img:first-child{
+  border-radius: 5%;
+}
+
+#kontakt li {
+  margin: 25px 0;
+}
+
+#kontakt li:last-child {
+  margin-top:50px;
+  font-size: 25px;
+  margin-left: 10px;
+
+}
+#kontakt li a{
+  margin-right: 25px;
+  margin-left: 10px;
+}
+#kontakt li a:last-child{
+  margin-right: 0px;
+}
+
+#kontakt li a img {
+  height: 30px;
+  width: 30px;
+  transition: 500ms;
+}
+
+#kontakt li a img:hover{
+  transform: scale(1.1);
+}
+
+/*footer*/
+
+#footer{
+  background-color: #4169e1;
+  color: white;
+  text-align: center;
+  padding: 15px 0px;
+  display: flex;
+}
+
+#footer p{
+  margin: 0px auto;
+}
+
+.arrow {
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  position: absolute;
+  right: 3%;
+  margin-top: 10px;
+  transition: 500ms;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+/*responsive*/
+
+/*----------------------Media queries---------------------------------------- */
+/************************************************************************************
+smaller than 500
+*************************************************************************************/
+
+@media screen and (max-width: 500px) {
+  .krug {
+    font-size: 20px;
+    padding: 25%;
+    width: 40px;
+    height: 40px;
+  }
+  .krugovi {
+    display: none;
+  }
+  .krugovi-responsive {
+    display: block;
+  }
+  #kreativnost .column p {
+    display: none;
+  }
+  .kreativnost {
+    padding: 5px;
+    font-size: 20px;
+  }
+  .page .column {
+    height: auto;
+  }
+  #kontakt-wrap {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .krug {
+    font-size: 20px;
+    padding: 25%;
+    width: 40px;
+    height: 40px;
+  }
+  #pocetna h1 {
+    font-size: 45px;
+  }
+  #main-menu {
+    display: block;
+  }
+  #main-menu a {
+    flex-grow: 1;
+    text-align: center;
+    text-decoration: none;
+    color: red;
+    display: block;
+    padding: 10px 0;
+    transition: 500ms;
+  }
+}

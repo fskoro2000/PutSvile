@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Put svile</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<meta name="viewport" content="width=device-width">
+		<script type="text/javascript" src="main.js"></script>
+		<link rel="icon" href="assets/krimg/logo.jpeg">
+		<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+  		<link rel="stylesheet" href="/resources/demos/style.css">-->
+		<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  		<script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+		  <script>
+		  	/*acordion*/
+			$( function() {
+				$( "#accordion" ).accordion({
+				  heightStyle: "fill"
+				});
+			 
+				$( "#accordion-resizer" ).resizable({
+				  minHeight: 140,
+				  minWidth: 200,
+				  resize: function() {
+					$( "#accordion" ).accordion( "refresh" );
+				  }
+				});
+			  } );
+
+			/*fade-in*/
+			$(document).ready(function() {
+				$(window).scroll(function(){
+					if($(this).scrollTop() > 0){
+						$('.dark-box').css({'opacity' : '0'})
+					}
+					else{
+						$('.dark-box').css({'opacity' : '1'})
+					}
+				})
+			})
+			  </script>
+		<style>
+			#accordion-resizer {
+				padding: 10px;
+				width: auto;
+				height: 80vh;
+				}
+		</style>
+	</head>
+	<body>
+
+		<div class="header">
+			<div class="column">
+				<div id="logo-social">
+					<div id="logo-holder">
+						<img src="assets/logo/Logo_Milenijsko.png" alt="logo" id="logo-img">
+					</div>
+					<div id="social-holder">
+						<a class="transform" href="https://hr-hr.facebook.com/kreativna.riznica/">
+							<img src="assets/social/facebook.png" alt="facebook-icon">
+						</a>
+						<a class="transform" href="https://www.instagram.com/kreativnariznica/?hl=hr">
+							<img src="assets/social/insta.png" alt="instagram-icon">
+						</a>
+						<a class="transform" href="https://twitter.com/">
+							<img src="assets/social/twitter.png" alt="twitter-icon">
+						</a>
+						<!--<a href="https://www.wechat.com/">
+							<img src="assets/social/wechat.png" alt="twitter-icon">
+						</a>
+						<a href="https://www.youtube.com/">
+									<img src="assets/social/yt.png" alt="baidu-icon">
+						</a>-->
+					</div>
+				</div>
+				<div>
+					<nav id="main-menu">
+						<a href="#marko-kubla" class="active" id="pocetnaLink">Početna</a>
+						<a href="#kultura" id="putovnicaLink">Hrvatska kulturna putovnica</a>
+						<a href="#kreativnost" id="kruznaLink">Kružna kreativnost</a>
+						<a href="#kontakt" id="kontaktLink">Kontakt</a>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<div id="jezik">
+				<a class="transform" href="#" onclick="prevediHrv()">Hrvatski</a>
+				<a class="transform" href="#" onclick="prevediEng()">English</a>
+				<a class="transform" href="#" onclick="prevediKin()">内斯基</a>
+		</div>
+
+		<div class="page" id="pocetna">
+			<div class="column">
+				<div class="dark-box">
+					<h1 id="vilijunNaslov">VILIJUN</h1>
+					<p class="paraf" id="vilijunParaf">Vilijun je roman namijenjen onima koji su skloni putovanjima i upoznavanju samoga sebe očima drugoga</p>
+					<br>
+					<p id="vilijunAutor">JASNA HORVAT</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="page" id="marko-kubla">
+			<div class="column">
+				
+				<div class="krugovi">
+					<div class="krug-holder align-center">
+						<div class="krug" id="count1">
+							<img id="myImg" class="transform" src="assets/krimg/marko.jpg" alt="">
+						</div>
+						<div class="oznaka">Marko Polo</div>
+						 <div id="myModal" class="modal">
+							  <span class="close">&times;</span>
+							  <!--<img class="modal-content" id="img01">
+							  <div id="caption"></div>-->
+							  <div class="modalText">
+							  	<p>
+									   Najveći putnik svih vremena, Marko Polo, rodio se u Blatu
+									na Korčuli kao potomak bogatog ogranka hrvatskog roda
+									Zmaj. Markov otac Nikola i stric Mate, poduzetni trgovci s
+									Istokom, dospjeli su do Kine 1269. godine. Ondje su se priključili poslanstvu perzijskog kana Hulagua i u današnjem Pekingu posjetili velikog mongolskog kana Kublaja. Kao Kublajevi
+									poslanici vratili su se s pismom i Kublaj-kanovom zamolbom
+									Papi da mu pošalje učene ljude koji bi poučavali u njegovu
+									Carstvu. Petnaestogodišnjeg Marka Pola povratak oca Nikole
+									i strica Mate zatekao je u Veneciji gdje je živio nakon smrti
+									majke bez primjerene roditeljske skrbi. S ocem, stricem i dva
+									dominikanca sedamnaestogodišnji Marko Polo kreće Putom
+									svile te prelazi Armeniju, Perziju, Afganistan, visoravan Badakhšan u zoni Pamira, Turkestan te pustinje Lop i Gobi. Nakon četiri godine putovanja otac, stric i Marko dospjeli su do
+									Kublaj-kana i ostali u njegovoj službi sve do 1292. godine kada
+									im se pružila prilika za povratak. Marko Polo istaknuo se u
+									diplomaciji kanove rezidencije. Za sedamnaest godina službe
+									proputovao je cijeli Daleki istok, tri je godine bio namjesnikom u gradu Yang-chou i imao upravu nad trgovinom soli.
+									Za zasluge je primio veliko bogatstvo, a kada je izrazio želju
+									za povratkom, na kanovno dopuštenje čekao je punih godinu
+									dana. Godine 1292. Marku, Nikoli i Mati Polu pružila se prilika
+									za povratak u ulozi poslanika koji su pratili mongolsku princezu, nevjestu perzijskog kana Arghuna. Njihovo povratničko putovanje započelo je u današnjem Quanzhouu. Na tom
+									višegodišnjem putovanju, koje je vodilo duž obala Indokine,
+									Sumatre, Nikobara, Šri Lanke i Prednje Indije do Hormuza,
+									upoznali su i druge narode i njihove običaje. Iz Hormuza su
+									princezu otpratili do Trabzona, a potom su se koncem 1295.
+									godine preko Carigrada vratili u Mletke. Premda iznadprosječno imućna obitelj Polo nastavila je živjeti u Veneciji i baviti se
+									trgovinom. Ubrzo nakon povratka Marko Polo zarobljen je na
+									Korčuli u sukobu đenovskog i mletačkog brodovlja koji se odigrao 8. rujna 1298. godine. Nakon četverodnevnog boravka u
+									korčulanskoj tamnici prevezen je u Genovu gdje je zasužnjen
+									godinu dana. Svoje dogodovštine Marko Polo prepričavao je
+									zatvorskom sudrugu koji ih je zabilježio na francuskom jeziku. Objavljene su u knjizi Livre des merveilles du monde (Čuda
+									svijeta) kasnije prevedenoj na talijanski i poznate pod nazivom
+									Il Millione (Milijun). Ta je knjiga Marka Pola, nakon Biblije i
+									Kurana, treća najprevođenija i najčitanija knjiga u ljudskoj
+									povijesti. Mnogi vjeruju kako je upravo Milijun Marka Pola,
+									unatoč svim preuveličavanjima kojima je Polo bio sklon pri
+									opisivanju Kublaj-kana, Kolumba potaknula i inspirirala na
+									njegova putovanja. Jednako tako, Marka Pola drži se zasluž-
+									nim za uporabu brojnih azijskih dostignuća, među ostalima 	
+									papirnatih novčanica, špageta, svile i začina. Nakon okončanja
+									svojih putovanja Marko Polo izgradio je obiteljski život u Veneciji. Sa suprugom Donatom Badoer imao je tri kćeri. Umro	
+									je u dobi od sedamdeset i jedne godine, a nakon njegove smrti
+									oslobođen je njegov sluga Tatar koji je Marka Pola pratio na
+									povratku iz Azije.
+									Kuća u kojoj je Marko Polo živio sa svojom vilom Oblakinjom
+									– jednom od Kublaj-kanovih kćeri – danas se prepoznaje po
+									bijelom tračku koji se zrakom povija kada joj se netko približi
+									držeći u ruci Markovu knjigu Milijun. Oni koji toga trenutka
+									čitaju Markov Milijun, osim što će vidjeti bijelu izmaglicu, čut
+									će i glas Kublaj-kanove kćeri kako pjeva svoju omiljenu pjesmu. 
+								</p>
+							  	
+							  </div>
+						</div>
+					</div>
+
+					<div class="krug-holder align-center">
+						<div class="krug" id="count3">
+							<img id="myImg2" class="transform" src="assets/krimg/kubla.jpg" alt="">
+						</div>
+						<div class="oznaka">Kublaj Khan</div>
+						<div id="myModal2" class="modal">
+							  <span class="close">&times;</span>
+							  <!--<img class="modal-content" id="img01">
+							  <div id="caption"></div>-->
+							  <div class="modalText2">
+							  <p>
+								Kublaj-kan, jedan od kakana, unuk je glasovitog Džingis-kana, učenik Konfucijevih učenjaka, vojskovođa i osvajač Kine.
+								Vladar je zajednice ujedinjenih nomadskih plemena − Kereita, Najmana, Tatara, Ujgura, Merkita, Ongirata, Oirata, Kirgiza, Tumata i Mongola koji su se nakon ujedinjenja počeli
+								nazivati Mongolima. Ujedinjavanje nomadskih plemena dogodilo se još za Džingis-kana − Kublaj-kanova slavnog pretka,
+								1206. godine na rijeci Ononu kada se Džingis-kan proglasio
+								vladarom „svih naroda nastanjenih u pustenim šatorima“.
+								Tako je stvorio Jeke Mongol Ulus − Veliku Mongolsku Naciju
+								koja se prostirala od gorja Altaja do Hingana i od Bajkalskog
+								jezera do pustinje Gobi. Kublaj-kan ponio je naslov Velikog
+								Kana 1260. godine nakon smrti starijeg brata Mangua i bitke u
+								kojoj je porazio svog rođaka Arik-Bokea. Za vladavine Kublaj-kana utemeljena je nova vladajuća dinastija Yuan, poboljšana je državna administracija, uveden standardizirani zakonik,
+								izgrađen obrazovni sustav, poticana trgovina i komunikacija
+								(izgradnjom cesta i kanala, uspostavljanjem redovitih poštanskih postaja, osiguravanjem sigurnog putovanja na starom
+								Putu svile), podignut je novi carski glavni grad u Cambalucu
+								(Camblau, današnji Peking). Kublaj-kan u svoju je službu novačio znanstvenike različitih naroda. Premda se među njima
+								nisu nalazili Kinezi, iznimni ljudi drugih naroda doprinijeli su
+								u širenju spoznaja i ugrađivanju novina. Papirnati novac uveo
+								je 1270. godine, a s njim i zakon o papirnatom zlatu kao legalnom sredstvu plaćanja. Prema tom zakonu svatko tko bi
+								odbio primiti papirnati novac, bivao bi kažnjen. Carem Kine
+								Kublaj-kan se proglasio 1271. godine, a četiri godine nakon
+								proglašenja primio je na svojem dvoru dvadesetjednogodišnjeg Marka Pola. Marko Polo stigao je Kublaj-kanu u ljeto
+								1275. godine, pred proslavu kanova šezdeset i trećeg rođendana. Susreli su se u vrlo bogatom i velikom gradu Clemenfuui u kojemu je kan provodio ljeta. Kasnije tijekom godina
+								njihova druženja osim u Clemenfuu tri su mjeseca u godini
+								boravili u gradu Camblauu– vladarevu gradu – u kojem je
+								kan nadvladavao zimu. Kana je čuvalo 12 000 konjanika viteza podijeljenih u četiri skupine i organiziranih u trodnevne
+								straže. Osim konjanika viteza svaki treći dan smjenjivalo se i
+								šest Tatarkinja (iz plemena Ungut koje je kanu darovalo stotinu najljepših djevojaka). Uz četiri carice i Tatarkinje kanova
+								je ložnica upoznavala i druge žene, jednu ljepšu od druge i
+								neusporedive sa svojim prethodnicama. Četiri kanove žene
+								nazivane su caricama i kanu su podarile ukupno dvadeset i
+								dva muška djeteta. Svaka od tih četiriju žena imala je poseban
+								dvor s najmanje 10 000 duša (tristotinjak djevojaka za poslugu	
+								te uz njih veliki broj eunuha i konjušara). Od ukupno dvadeset i dvojice sinova koje su carice podarile kanu, sedmorica su
+								postali kraljevi velikih kraljevstava. Kublaj-kana naslijedio je
+								unuk Timur – najstariji sin najstarijeg (preminulog) kanova
+							    sina Džingis-kana – potomka jedne od četiriju carica koje je
+								kan smatrao svojim pravim suprugama.
+							  </p>
+							  </div>
+						</div>
+					</div>
+				</div>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="page" id="kultura">
+			<div id="acordion-wrap">
+				<h2>Hrvatska kulturna putovnica</h2>
+				<div id="accordion-resizer" class="ui-widget-content" style="padding: 0px;">
+					<div id="accordion">
+						<h3>Kockovlje<hr></h3>
+						<div>
+						  <p>
+							Hrvatsko kockovlje dijelom je hrvatskoga grba te je ujedno jedna
+                            od potvrda iranskoga podrijetla hrvatskoga naroda. Ploča je to u
+                            obliku štita na kojoj se u pet redova i u pet stupaca smjenjuju crvena i srebrno-bijela polja. Tih 25 polja prikaz su suprotnosti i borbe ali i magičnog kvadrata/kocke na čijim se poljima ispisuje povijest.
+                            U njih je upisana slutnja rata i napetosti, ali i ravnoteža mirnodopskog doba u kojemu polja miruju i po njima se ne kreću ni oni koji
+                            napadaju ni oni koji su u obrani. Hrvatsko je kockovlje dvobojno, a time i dualno te u stalnoj napetosti između dobra i zla, obrane i napada, duhovnog i tjelesnog,
+                            svijetlog i mračnog, prošlog i budućeg. Crvena polja označuju krv
+                            i život koji kola, a bijela označuju sol koja je nositelj života, ali i
+                            kosti onih koji su pali zbog svojih uzdignuća. Crvena i bijela polja zavjetna su. U njih su položene stoljetne nade, želje i žrtve. Crveno
+                            i srebrno-bijelo kockovlje hrvatski narod obrubljuje plavom bojom. Plava boja za hrvatski je narod i nebo i more te sposobnost svakog pojedinca da se sâm uzvine u visine i da se porine u dubine.
+						  </p>
+						</div>
+						<h3>Troplet<hr></h3>
+						<div>
+						  <p>
+							Hrvatski troplet geometrijski je ornamet nastao isprepletanjem
+                            triju traka. Ako su u prepletu dvije trake, tada je pleter dvopruti, a
+                            ako su u prepletu tri trake, tada je tropruti. Hrvatski pleter najčešće je troplet i bilo da je u obliku valova, troprute pletenice, penta-
+                            grama ili mreže rombova, svjedoči o vještini majstora iz hrvatskih klesarskih radionica. Prvi hrvatski knezovi, Branimir i Mutimir, svoje su natpise uokvirili pleternim uresom. U toj reljefnoj dekoraciji kojoj je osnovni element jednotračni ili višetračni prutić pažljivi promatrač uočit će dotjeran motiv kakve biljke, ali i životinjskog ili ljudskog lika. Hrvatski su majstori troplet preuzeli iz antičke tradicije, ali su ga prestilizirali i prilagodili vlastitom temperamentu i nadahnuću. Hrvatskim se tropletom ukrašavaju crkve i njihovi dijelovi: arhitravi, ciboriji, pluteji, okviri prozora i vrata, zabati i crkveni namještaj. Troplet Hrvati stavljaju i na svoj
+                            grb, na nadgrobne spomenike i na isprave. Pokazuju ga s ponosom i
+                            kao da se predstavljaju njime. Oni koji su skloni misaonom nomadstvu pleterom iscrtavaju magični kvadrat broja dvanaest
+						  </p>
+						</div>
+						<h3>Ime Hrvat<hr></h3>
+						<div>
+						  <p>
+							Predstavljam se kao Hrvat jer u mene je upisano značenje imena naroda koji govori jezikom Hurrvuhe, a spominju se u rukopisu iz 1370. godine prije Krista. Svojim stopalima izmjerio sam prostor Harauvatya u kojemu su za Ahemenida, Kira II. i Darija I. živjeli pripadnici plemena Harauvatis (Harahvaiti). Ondje sam slušao o ulančanim imenima koja kavkasko-mezopotamsko-iranske Prahrvate povezuje
+							s današnjim Hrvatima. Taj ulančani niz imena opjevavao bih ovako:
+							Huravat je isto što i Sarasvat kojemu je srodnik Aruvat, a odziva se na povik: – Harahvaiti, Harvat, Aurvat, Hrauvatiš ili Harauvatija. Osim ovih imena koja su mu najmilija, odazvat će se i na imena
+							Harauvatim, Harauvat, Harahvat i Horohvat. Na sedlu mu piše Ari-
+							vates, a na ostima Horvathos. Na kapi mu je izvezeno ime Hrovatoi, na rukavici Crvat, a na koplju Harvat, Horvat, Hrvat.
+							U imenu Hrvat prepoznaju se i oni koji imaju mnogo zemlje. Neki
+							ime Hrvat povezuju s glagolom hrvati ili s riječima pridošlim iz drugih jezika, a koje se u svojoj zvučnosti mogu povezati s imenom
+							Hrvat. Takvih riječi doista je puno, a samo su neke od njih stablo,
+							ples, hrbat, oklopnik, branitelj, sunčano ležište, onaj koji ima prijate-
+							lje, narod ili slobodni bojovnik. Ispunjavanje obećanja, držanje dane riječi te častan život običaji
+							su usko vezani sa značenjem imena Hrvat. Hrvatski narod osobito
+							žarko utječe se Majci Božjoj koja je, uz svetog Josipa i svetog Nikolu
+							Tavelića, zaštitnica, zagovornica i pomoćnica hrvatskoga naroda.
+						  </p>
+						</div>
+						<h3>Glagoljica<hr></h3>
+						<div>
+					      <p>
+							Glagoljica je sustav znakova nadahnut kršćanstvom koji je od 9.
+							stoljeća premoćno pismo hrvatskih prostora. Glagoljicom su se
+							Hrvati istodobno opismenjavali i pokrštavali. Tko je primio vjeru,
+							postao je pismen jer je životom u vjeri pamtio glagoljicu kojom
+							su se koristili kao podsjetnikom za molitvu. Mudar je bio tvorac
+							glagoljice! Za njega je pismo pripovjedač koji pripovijeda priču o
+							Bogu Kristu, ali i o cijeloj tradiciji baštinjenoj od predaka. Stoga
+							je svaki pismovni znak trojedan – istodobno bivajući slovo, simbol
+							i broj. Brojčana slova episemoni razdijeljena su u tri eneade (1–9, 10–90, 100–900) jer je svakom čovjeku od Boga dano brojiti sa svojih deset prstiju. Glagoljica je i po tome i po grafijskom oblikovanju svojih znakova slijedila kršćansku vjeru, evanđelja i trojedinstvo Božanske Osobe: Oca, Sina i Duha Svetoga.
+							Poredak prvih devet glagoljskih znakova molitva je u kojoj svaki
+							kršćanin koji slova poznaje govori kako je dobro časno živjeti na zemlji. Glagoljica kao pismo poručuje: – Govorite! Pripovijedajte priču o Bogu Kristu i njegovoj žrtvi podnijetoj na križu čiji kraci gledaju na
+							sve četiri strane svijeta: istok, zapad, sjever i jug.
+							Osim na glagoljici Hrvati pišu i na bosančici i na latinici. Oni koji u Kraljevstvu Hrvatskom svoje ime ispisuju glagoljicom u svakom glagoljskom znaku primaju podsjetnik na to da je dobro časno živjeti na zemlji. 
+						  </p>
+						 
+						</div>
+					  </div>
+				</div>
+			</div>
+		</div>
+
+		<div class="page" id="kreativnost">
+			<div class="column">
+					<h2>KRUŽNA KREATIVNOST</h2>
+					<div id="slider-content-wrap">
+						<div id="slider-content-text">
+							<p>
+								Kružnost kreativne industrije posjeduje potencijale sumjerljive potencijalima kružnosti i svake druge industrije.  
+							</p>
+							<p>Razlika od koje je potrebno krenuti nalazi se u definiranju „sirovine“ (u kreativnoj industriji riječ sirovinu 	predstavlja autorska ideja),<br> mogućnostima i načinima njezina „kruženja“ kroz sve sektore kreativne industrije te određivanju cilja, misije i vizije koji se takvom, kružnom proizvodnjom postižu posebice ukoliko su usmjereni na godinilobalno brendiranje zajednica ili proizvoda.</p>
+							<p>U takvom teorijskom promišljanju kružnosti kreativne industrije polazi se od Throsbyjeva Koncentričnog kružnog modela (Throsby, 2008).</p>
+						</div>
+						<div class="slider-wrap">
+							<div class="slider-item mySlides">
+								<img src="assets/slider/01 - Arhitektura.png">
+							</div>
+							<div class="slider-item mySlides">
+								<a href="https://www.youtube.com/watch?v=5rlx1gLyVRo&t=124s">
+									<img src="assets/slider/02 - Audiovizualna.png">
+								</a>
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/03 - Glazba.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/04 - Izvedbene umjetnosti.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/05 - Knjiga, nakladništvo.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/06 - Mediji.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/07 - Oglašavanje.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/08 - Primijenjene umjetnosti.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/09 - Računalne igre, novi mediji.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/10 - Vizualne umjetnosti.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/11 - Dizajn.png">
+							</div>
+							<div class="slider-item mySlides">
+								<img src="assets/slider/12 - Baština.png">
+							</div>
+							<button class="transform" onclick="plusDivs(-1)">&#10094;</button>
+							<button class="transform" onclick="plusDivs(+1)">&#10095;</button>
+						</div>
+					</div>
+			</div>
+		</div>
+
+
+		<div class="page" id="kontakt">
+			<div class="column" style="height: auto;">
+				<h2>POZIV NA SURADNJU</h2>
+				<div id="kontakt-wrap">
+					<div id="forma-kontakt">
+						<h4>Adresa</h4>
+						<p>Trg Ljudevita Gaja 7, 31000, Osijek</p>
+						<ul>
+							<li>
+								<a class="transform" href="https://hr-hr.facebook.com/kreativna.riznica/">
+									<img src="assets/social/facebook.png" alt="facebook-icon">	
+								</a>
+								<a class="transform" href="https://www.instagram.com/kreativnariznica/?hl=hr">
+									<img src="assets/social/instagram.png" alt="instagram-icon">
+								</a>
+								<a class="transform" href="https://twitter.com/">
+									<img src="assets/social/twitter.png" alt="twitter-icon">
+								</a>
+							</li>
+							<li>
+								<a class="transform" href="https://www.youtube.com/c/InstitutAndizet">
+									<img src="assets/social/yt.png" alt="youtube-icon">
+								</a>
+								<a class="transform" href="#">
+									<img src="assets/social/link.png" alt="linkedIn-icon">
+								</a>
+								<a class="transform" href="#">
+									<img src="assets/social/g+.png" alt="google+-icon">
+								</a>
+							</li>
+							<li>
+								<a class="transform" href="https://www.wechat.com/">
+									<img src="assets/social/wechat.png" alt="wechat-icon">
+								</a>
+								<a class="transform" href="https://www.youku.com/">
+									<img src="assets/social/youku2.png" alt="youku-icon">
+								</a>
+								<a class="transform" href="https://weibo.com/overseas">
+									<img src="assets/social/weibo.png" alt="weibo-icon">
+								</a>
+							</li>
+							<li><i><b>Za sve upite potražite nas na društvenim mrežama!</b></i></li>
+						</ul>
+					</div>
+					<div>
+						<img src="assets/krimg/kubla2.jpg">
+					</div>
+			
+		</div>
+		</div>
+				<p style="margin: 5% auto;text-align: center;"><i>Stranica je nastala kao idejno rješenje za temu ovogodišnjeg milenijskog natjecanja Kreativne Riznice - Put Svile</i></p>
+		</div>
+
+		<div id="footer">
+			<p>Sva prava zadržava PI2021</p>
+			<a href="#logo-social"><i class="arrow up"></i></a>			
+		</div>
+
+		<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+			var modal2 = document.getElementById("myModal2");
+
+			// Get the image and insert it inside the modal - use its "alt" text as a caption
+			var img = document.getElementById("myImg");
+			img.onclick = function(){
+			  modal.style.display = "block";
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal.style.display = "none";
+			}
+
+			var img2 = document.getElementById("myImg2");
+			img2.onclick = function(){
+			  modal2.style.display = "block";
+			}
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[1];
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() { 
+			  modal2.style.display = "none";
+			}
+
+			//slider
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			  showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length} ;
+			  for (i = 0; i < x.length; i++) {
+			    x[i].style.display = "none";
+			  }
+			  x[slideIndex-1].style.display = "block";
+			}
+			
+			
+
+		</script>
+		
+	</body>
+</html>
